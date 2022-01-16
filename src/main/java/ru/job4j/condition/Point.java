@@ -17,7 +17,3 @@ public class Point {
         System.out.println("result (3, -3) to (6, -5) " + result2);
     }
 }
-
-
-      //  Math.sqrt(a)   - корень квадратный от a.
-      //  Math.pow(a, b) - возведение числа а в степень b.
