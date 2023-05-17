@@ -3,21 +3,17 @@ package ru.job4j.array;
 public class SimpleStringEncoder {
     public static String encode(String input) {
         String result = "";
-        String count = "";
         char symbol = input.charAt(0);
         int counter = 1;
         for (int i = 1; i < input.length(); i++) {
             if (input.charAt(i) == symbol) {
                 counter++;
-                count = "" + counter;
             } else {
-                result +=  "" + symbol + count;
-                count = "";
+                result += counter > 1 ? "" + symbol + counter : symbol;
                 counter = 1;
                 symbol = input.charAt(i);
             }
         }
-        result += "" + symbol + count;
-        return result;
+        return result + (counter > 1 ? "" + symbol + counter : symbol);
     }
 }
